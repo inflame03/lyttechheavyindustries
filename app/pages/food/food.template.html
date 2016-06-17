@@ -1,0 +1,64 @@
+
+<h2> Ingredients list
+</h2>
+
+<div>
+    <div>
+        <select id="itemType" name="itemType"
+            ng-model="itemTypeSelected" (change)="onChange($event.target.value)" >
+            <option *ngFor="#option of itemTypeList"  
+                    value="{{option.ItemType}}">{{option.Name}}</option>
+        </select>
+    </div>
+    <div style="clear:both"></div>
+    <div *ngFor="#item of foodList"  class="table table-bordered"
+            (click)="onSelect(item)" class="itemContainer">
+        <input type="hidden" value="{{item.ID}}" />
+        {{item.Name}} 
+        <button type="button" class="close badge" (click)="onDelete(item)">
+            &times;
+        </button>
+    </div>
+    <div style="clear:both"></div>
+    <div>
+        <h3> Add New Item Here </h3>
+        <div>
+            <label>name: </label>
+            <input id="newName" name="newName" placeholder="name" />
+        </div>
+
+    </div>
+    <div>
+        <button id="btnAction" name="btnAction" class="btn btn-primary"
+                (click)="saveNewFoodItem()"> 
+            Insert new item
+        </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+</div>
+
+
+
+
+
+<!--
+<ul>
+  <li *ngFor="#item of foodList" 
+        (click)="onSelect(item)"> 
+      <input type="hidden" value="{{item.ID}}" />
+        <span class="badge">{{item.Name}}</span> 
+  </li>
+</ul>-->
+
+   
+
+<!--
+<table class="table table-bordered table-striped">
+    <tr *ngFor="#item of foodList" 
+            (click)="onSelect(item)">
+        <td>
+            <input type="hidden" value="{{item.ID}}" />
+            {{item.Name}} 
+        </td>
+
+    </tr>
+</table>-->

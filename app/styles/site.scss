@@ -1,0 +1,71 @@
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 45px;
+  background-color: #f5f5f5;
+}
+
+.headerinfo {
+    height: 220px;
+    vertical-align: middle;
+    
+}
+.headerinfo-text
+{
+    padding-top : 50px;
+}
+
+.indent-section-header
+{
+    margin-left: 30px;
+}
+
+
+.bg-main
+{
+    margin-bottom: 45px;
+    background-color: #F0F0F0;
+}
+
+.bg-content
+{
+    background-color: #FFFFFF;
+}
+
+.work-exp-company
+{
+    font-size: 20px;
+}
+
+.work-exp-date
+{
+    padding-top : 5px;
+}
+
+.hover-pointer
+{
+    cursor: pointer;
+}
+
+div.itemContainer
+{
+    font-weight: bold;
+    float : left;
+    width: 150px;
+    height: 35px;
+    border: solid 1px red;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.vert-align
+{
+    vertical-align:  middle;
+}
